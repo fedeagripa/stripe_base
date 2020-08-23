@@ -42,6 +42,8 @@ class User < ApplicationRecord
 
   before_validation :init_uid
 
+  has_many :payments
+
   def full_name
     return username if first_name.blank?
 

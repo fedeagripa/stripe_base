@@ -30,6 +30,16 @@ class StripeService
     user.update!(card_id: card_id)
   end
 
+  def create_payment
+    Stripe::Charge.create({
+      amount: 100,
+      currency: 'usd',
+      description: 'Example charge',
+      customer: user.customer_id,
+      source: user.card_id,
+    })
+  end
+
   def customer
     customer_id = user.customer_id
     return unless customer_id.present?
