@@ -52,7 +52,7 @@ class StripeService
   def create_customer(email, name)
     customer_params = {
       email: email,
-      description: user.name
+      description: "Customer - #{name}"
     }
     @customer = Stripe::Customer.create(customer_params)
     user.update!(customer_id: @customer.id)

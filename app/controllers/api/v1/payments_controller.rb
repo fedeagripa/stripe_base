@@ -21,7 +21,7 @@ module Api
       end
 
       def amount
-        params[:amount]*100 || 10000
+        (params[:amount].to_i * 100) || 10000
       end
     end
   end

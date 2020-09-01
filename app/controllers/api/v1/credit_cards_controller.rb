@@ -38,11 +38,11 @@ module Api
       end
 
       def email
-        token_json['email']
+        token_json['email'] || "example#{user.id}@example.com"
       end
 
       def customer_name
-        token_json['name']
+        token_json['name'] || user.full_name
       end
     end
   end
