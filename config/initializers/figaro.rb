@@ -1,5 +1,5 @@
 # Put here the variables used by all the environments
-variables = %w[SERVER_URL PASSWORD_RESET_URL]
+variables = []
 
 unless Rails.env.test?
   # Variables not used by the test environment
