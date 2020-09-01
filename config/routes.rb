@@ -20,6 +20,9 @@ Rails.application.routes.draw do
       resources :settings, only: [] do
         get :must_update, on: :collection
       end
+
+      resources :credit_cards, only: %i[index create update]
+      resources :payments, only: %i[index create]
     end
   end
 end
