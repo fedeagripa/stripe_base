@@ -17,8 +17,5 @@
   "resolutions": {
     "compression-webpack-plugin": "^4.0.0",
     "dot-prop": ">=5.2.0"
-  },
-  "scripts": {
-    "heroku-postbuild": "webpack --config webpack.prod.js"
   }
 }
