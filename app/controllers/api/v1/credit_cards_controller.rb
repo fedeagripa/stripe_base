@@ -10,8 +10,9 @@ module Api
       end
 
       def create
-        StripeService.new(user).add_card(token_id, email, customer_name) if token_id
-        head :no_content
+        service = StripeService.new(user)
+        service.add_card(token_id, email, customer_name) if token_id
+        @card = service.credit_card_info
       end
 
       def update

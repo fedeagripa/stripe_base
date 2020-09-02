@@ -10,8 +10,7 @@ module Api
       def create
         StripeService.new(user).create_payment
         # payments are stored in cents
-        Payment.create!(user: user, concept: 'Test payment', amount: amount)
-        head :no_content
+        @payment = Payment.create!(user: user, concept: 'Test payment', amount: amount)
       end
 
       private
