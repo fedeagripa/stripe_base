@@ -8,7 +8,7 @@
 1. `bundle install`
 1. Generate a secret key with `rake secret` and paste this value into the `application.yml`.
 1. Run `yarn` to install webpack needs
-1. `rails db:create db:migrate`
+1. `rails db:create db:migrate` FEEDBACK: You can just do `rails db:setup` and it will create + migrate + seed
 1. `rspec` and make sure all tests pass
 1. `rails s`
 1. You can now try your REST services!
